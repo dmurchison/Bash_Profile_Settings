@@ -25,7 +25,7 @@ def bubble_sort(array) # rubocop:disable Metrics/MethodLength
   loop do
     swapped = false
     (n - 1).times do |i|
-      next unless array[i] > array[i + 1]
+      next unless Array[i] > array[i + 1]
 
       # Swap
       array[i], array[i + 1] = array[i + 1], array[i]

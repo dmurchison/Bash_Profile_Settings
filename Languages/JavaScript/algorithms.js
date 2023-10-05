@@ -18,5 +18,5 @@ var len = arr.length;
 
 
 // Test Cases
-console.log(bubbleSort([5,3,8,2,1,4]));
-console.log(bubbleSort([20,20,31,56,1,12,12]));
+console.log(`${bubbleSort([5,3,8,2,1,4])}`);
+console.log(`${bubbleSort([20,20,31,56,1,12,12])}`);
