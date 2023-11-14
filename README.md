@@ -1,9 +1,11 @@
-# Properly install WSL, RBENV, PYENV, Node.JS
+# Properly install WSL, RBENV, PYENV, Node.JS*
 
-* This folder is meant to be open daily and kept open throughout the day, it allows me to open new codespaces and work throughout the day knowing every instance of VS Code will be open in my WSL.
-* Working on a more streamlined way to open VS Code every time using WSL without using the terminal.
+* This is a proper guide to setting up and even customizing your WSL environment.
+* This guide will also help you install and configure RBENV, PYENV, and Node.JS.
+* This guide is for Ubuntu 20.04 LTS.
+* PLEASE USE WITH CAUTION AS TO NOT BREAK ANY OF YOUR CURRENT ENVIRONMENTS.
 
-## Setup
+## Setup, From the beginning
 
 1. Install the WSL app from the Microsoft Store.
     * From the internet:
@@ -17,17 +19,17 @@
 
 ## RBENV Installation and Configuration
 
-1. Run the following CMD's:
-    * `sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev`
-    * `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
-    * `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`
-    * `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`
-    * `echo export EDITOR="code --wait" >> ~/.bashrc`
-    * `source ~/.bashrc`
+* Run the following CMD's
+  * `sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev`
+  * `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
+  * `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`
+  * `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`
+  * `echo export EDITOR="code --wait" >> ~/.bashrc`
+  * `source ~/.bashrc`
 
 ## Ruby Installation
 
-* Run the following CMD's:
+* Run the following CMD's
   * `rbenv install 3.2.2`
   * `rbenv global 3.2.2`
   * `ruby -v`
@@ -36,10 +38,32 @@
   * `gem install rails -v 7.1.0`
   * `rbenv rehash`
 
+## PYENV Installation and Configuration
+
+* Run the following CMD's
+  * `sudo apt-get install git gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev zlib1g-dev libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev`
+  * `curl https://pyenv.run | bash`
+  * `export PATH="/home/USERNAME/.pyenv/bin:$PATH"`
+  * `eval "$(pyenv init -)"`
+  * `eval "$(pyenv virtualenv-init -)"`
+  * `echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc`
+  * `source ~/.bashrc`
+
+## Python Installation
+
+* Run the following CMD's
+  * `pyenv install 3.10.0`
+  * `pyenv global 3.10.0`
+  * `python -V`
+  * `pyenv rehash`
+  * `pip install --upgrade pip`
+  * `pip install pipenv`
+  * `pyenv rehash`
+
 ## PSQL and SQLite Installation
 
-* Run the following CMD's:
-  * `sudo apt-get inatall postgresql libpq-dev`
+* Run the following CMD's
+  * `sudo apt-get install postgresql libpq-dev`
   * `sudo service postgresql start`
   * `source ~/.bashrc`
   * `sudo apt install sqlite3 libsqlite3-dev`
@@ -55,7 +79,7 @@
 
 ## NodeJS Installation
 
-* Run the following CMD's:
+* Run the following CMD's
   * `curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh`
   * `bash install_nvm.sh`
   * `source ~/.bashrc`
