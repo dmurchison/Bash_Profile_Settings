@@ -1,9 +1,9 @@
-# Properly install WSL, RBENV, PYENV, Node.JS*
+# RBENV, PYENV, NODE Installation guide for WSL2 Linux Ubuntu
 
 * This is a proper guide to setting up and even customizing your WSL environment.
-* This guide will also help you install and configure RBENV, PYENV, and Node.JS.
-* This guide is for Ubuntu 20.04 LTS.
-* PLEASE USE WITH CAUTION AS TO NOT BREAK ANY OF YOUR CURRENT ENVIRONMENTS.
+* This guide will also help you install and configure RBENV, PYENV, and NodeJS.
+* This guide is for Ubuntu 22.^
+* PLEASE USE THIS WITH CAUTION TO NOT BREAK ANY OF YOUR CURRENT ENVIRONMENTS.
 
 ## Setup, From the beginning
 
@@ -11,7 +11,7 @@
     * From the internet:
         * Install Google Chrome
         * Install VS Code
-2. Open the powershell as an admin and run the CMD `wsl --install` to install the WSL.
+2. Open the PowerShell as an admin and run the CMD `wsl --install` to install the WSL.
     * After the installation is complete, restart your computer.
 3. Now open the Ubuntu terminal and run the following CMD's:
     * `sudo apt update`
